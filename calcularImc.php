@@ -2,13 +2,13 @@
 	
 	$sexo = filter_input(INPUT_POST, 'sexo');
 	$altura = filter_input(INPUT_POST, 'altura');
-    $peso = filter_input(INPUT_POST, 'peso');
+    	$peso = filter_input(INPUT_POST, 'peso');
 	$edad = filter_input(INPUT_POST, 'edad');
 	
 	//$imc =  (float)$peso / ((float)$altura ** 2);
 	$imc = (float)$peso / (($altura ** 2) / 10000);
 	
-    echo "IMC: ".intval($imc); 
+    	echo "IMC: ".intval($imc); 
 	
 	if($sexo == 'm' || $sexo == 'M') {
 		if($imc < 20) {
